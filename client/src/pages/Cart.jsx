@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import StripeCheckout from "react-stripe-checkout";
 import Cartitem from "../components/cartItem.jsx";
+import axios from "axios";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);
   const userInfo = useSelector((state) => state.luxehub.userInfo);
@@ -26,6 +27,12 @@ const Cart = () => {
     } else {
       toast.error("Please sign in to Checkout");
     }
+  };
+  const payment = async (token) => {
+    await axios.post("http://localhost:8000/pay", {
+      amount: totalAmt * 100,
+      token: token,
+    });
   };
   return (
     <>
@@ -72,7 +79,7 @@ const Cart = () => {
                   amount={totalAmt * 100}
                   label="Pay to bazar"
                   description={`Your Payment amount is $${totalAmt}`}
-                  // token={payment}
+                  token={payment}
                   email={userInfo.email}
                 />
               </div>
