@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import "react-toastify/dist/ReactToastify.css";
-import { app } from "./fireabase.config";
+import { app } from "./Firebase.config.jsx";
 import { store, persistor } from "./redux/store";
 
 import "./index.css";

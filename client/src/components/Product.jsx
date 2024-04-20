@@ -1,9 +1,10 @@
 //this component defines description of each product with their price, details etc upon clicking//
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { MdOutlineStar } from "react-icons/md";
+
 import { useDispatch } from "react-redux";
 import { addtoCart } from "../reduxSlice/luxehubSlice.jsx";
+import { MdOutlineStar } from "react-icons/md";
 
 import { ToastContainer, toast } from "react-toastify";
 
