@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import StripeCheckout from "react-stripe-checkout";
 import Cartitem from "../components/cartItem.jsx";
-import axios from "axios";
+// import axios from "axios";
 const Cart = () => {
   const productData = useSelector((state) => state.luxehub.productData);
   const userInfo = useSelector((state) => state.luxehub.userInfo);

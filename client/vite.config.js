@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["react-redux", "react-toastify"], // Separate external dependencies with a comma
+      external: ["react-redux", "react-toastify", "react-icons/fa"], // Separate external dependencies with a comma
     },
   },
 });
